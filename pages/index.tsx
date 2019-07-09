@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
 import ProTip from '../src/ProTip';
 import Link from '@material-ui/core/Link';
+import NextLink from 'next/link';
 
 function MadeWithLove() {
   return (
@@ -23,11 +24,13 @@ export default function App() {
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Next.js v4-alpha with TypeScript example
+          Next.js v4.2.0 with TypeScript example
         </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
+        <NextLink href="/about">
+          <Link href="#" color="secondary">
+            Go to the about page
         </Link>
+        </NextLink>
         <ProTip />
         <MadeWithLove />
       </Box>
